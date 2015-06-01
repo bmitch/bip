@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/bmitch/bip.svg?branch=master)](https://travis-ci.org/bmitch/bip)
+
 ## Bip Micro Blogging Platform
 
 An experiment in a stupid idea for a micro blogging platform.
