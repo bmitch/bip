@@ -4,7 +4,6 @@ use Laracasts\TestDummy\Factory as TestDummy;
 
 class ExampleTest extends TestCase {
 
-
 	/** @test */
 	public function it_displays_all_posts()
 	{

@@ -1,6 +1,11 @@
 <?php
 
+use Laracasts\Integrated\Services\Laravel\DatabaseTransactions;
+
+
 class TestCase extends Laracasts\Integrated\Extensions\Laravel {
+
+	use DatabaseTransactions;
 
 	/**
 	 * Creates the application.
