@@ -21,6 +21,12 @@ class AuthController extends Controller {
 	use AuthenticatesAndRegistersUsers;
 
 	/**
+	 * Custom redirect path. Once a user is registered they
+	 * will be forwarded to this route.
+	 */
+	protected $redirectPath = 'posts/create';
+
+	/**
 	 * Create a new authentication controller instance.
 	 *
 	 * @param  \Illuminate\Contracts\Auth\Guard  $auth
