@@ -7,5 +7,5 @@ $factory('App\Post', [
 $factory('App\User', [
 	'name' => $faker->name,
 	'email' => $faker->email,
-	'password' => bcrypt('password')
+	'password' => 'password'
 ]);
