@@ -12,7 +12,8 @@
 		"phpspec/phpspec": "~2.1",
 		"laracasts/integrated": "^0.15.5",
         "squizlabs/php_codesniffer": "2.*",
-        "phpmd/phpmd" : "@stable"
+        "phpmd/phpmd" : "@stable",
+        "sebastian/phpcpd": "*"
 	},
 	"autoload": {
 		"classmap": [
