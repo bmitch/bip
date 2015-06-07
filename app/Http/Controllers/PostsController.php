@@ -58,7 +58,7 @@ class PostsController extends Controller {
      */
     public function show($id)
     {
-        //
+        $id;
     }
 
     /**
@@ -69,7 +69,7 @@ class PostsController extends Controller {
      */
     public function edit($id)
     {
-        //
+        $id;
     }
 
     /**
@@ -80,7 +80,7 @@ class PostsController extends Controller {
      */
     public function update($id)
     {
-        //
+        $id;
     }
 
     /**
@@ -91,7 +91,7 @@ class PostsController extends Controller {
      */
     public function destroy($id)
     {
-        //
+        $id;
     }
 
 }
