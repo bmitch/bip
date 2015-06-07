@@ -16,3 +16,4 @@ script:
  - vendor/bin/phpcs --standard=phpcs.xml app
  - vendor/bin/phpmd app text unusedcode,codesize
  - vendor/bin/phpcpd app
+ - vendor/bin/phploc app
