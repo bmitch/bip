@@ -1,7 +1,5 @@
 <?php
 
-use Laracasts\TestDummy\Factory as TestDummy;
-
 class AuthTest extends TestCase {
 
 	/** @test */
@@ -39,23 +37,24 @@ class AuthTest extends TestCase {
 	/** @test */
 	public function it_notifies_a_user_of_registration_errors()
 	{
+		// Missing email
+		$credentials = ['email' => ''];
+		$this->register($credentials)
+			 ->andSeePageIs('auth/register')
+			 ->andSee('The email field is required.');
 
-	
+		// Missing name
+		$credentials = ['name' => ''];
+		$this->register($credentials)
+			 ->andSeePageIs('auth/register')
+			 ->andSee('The name field is required.');
+
+		// Missing password
+		$credentials = ['password' => ''];
+		$this->register($credentials)
+			 ->andSeePageIs('auth/register')
+			 ->andSee('The password field is required.');
+
 	}
-
-	protected function register(array $overrides)
-	{
-		$fields = $this->getRegisterFields($overrides);
-		return $this->visit('auth/register')
-		    		->andSubmitForm('Register', $fields);
-	}
-
-	protected function getRegisterFields(array $overrides)
-	{
-		$user = TestDummy::attributesFor('App\User', $overrides);
-		return $user + ['password_confirmation' => $user['password']];
-
-	}
-
 
 }

@@ -17,6 +17,7 @@ class ExampleTest extends TestCase {
 	/** @test */
 	public function it_publishes_a_post()
 	{
+		$this->register();
 
 		$post = TestDummy::attributesFor('App\Post');
 
@@ -25,7 +26,13 @@ class ExampleTest extends TestCase {
 			 ->verifyInDatabase('posts', $post)
 			 ->see($post['content'])
 			 ->onPage('posts');
-	
+	}
+
+	/** @test */
+	public function it_wont_let_you_post_without_logging_in()
+	{
+		$this->visit('posts/create')
+			 ->andSeePageIs('auth/login');
 	}
 
 }
